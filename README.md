@@ -37,7 +37,7 @@ if all goes well you should see the following
 Confirming the Picon Zero board has been found at i2C address 0x22
 
 
-##Testing the library
+## Testing the library
 The library must be in the same directory as your python3 file.
 
 To check everything is running, ensure at least one motor is connected to the Picon Zero motor controller, the library has a basic check script which runs if it is called directly.
@@ -62,12 +62,12 @@ If you have two motors connected you can try option 3 to spin both motors at the
 
 If you want to see what is going on, open up ```piconzero.py``` and review the code towards the bottom, below the line ```if __name__ == '__main__':```
 
-##Creating your own python3 code
+## Creating your own python3 code
 If you want to create your own python3 code you need to import the piconzero library, add this import statement to the top of your script.
 
 	import piconzero
 
-###Using the Motor object
+### Using the Motor object
 	
 Then create a couple of motor objects
 
@@ -85,7 +85,7 @@ or we can use a single method to control both forwards and reverse
 
 * ```motorA.set_motor(speed)``` where speed is between ```-1``` and ```1```, ```-1``` being full speed reverse, ```0``` being stop and ```1``` being full speed forward.  You can of course use floats between ```-1``` and ```1```, for example, for 1/2 speed reverse set speed to ```-0.5```
 
-###using the Robot object
+### Using the Robot object
 
 Crete a robot object
 
