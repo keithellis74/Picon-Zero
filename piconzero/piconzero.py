@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-#   piconzero.py is a library to interact with the 4Tronix Picon Zero
-#   motor controller
-#   Copyright (C) 2017  Keith Ellis
+#    piconzero.py is a library to interact with the 4Tronix Picon Zero
+#    motor controller - https://4tronix.co.uk/blog/?p=1224
+#    Copyright (C) 2017  Keith Ellis
 
  #   This program is free software: you can redistribute it and/or modify
  #   it under the terms of the GNU General Public License as published by
@@ -27,6 +27,9 @@
 
 # Two other classes are 'Motor' and 'Robot', both inherrit from 'Motor_Controller'
 # to control either a single motor or a pair of motors in the form of a robot
+
+# Other functions of the board, such as inputs and outputs are still to be
+# completed
 
 import smbus
 import time
