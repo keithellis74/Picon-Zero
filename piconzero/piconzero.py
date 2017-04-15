@@ -33,13 +33,7 @@
 # I2C communication
 
 # Two other classes are 'Motor' and 'Robot', both inherrit from 'Motor_Controller'
-# Motor provides a number of methods for controlling a single motor, i.e.
-# forward(speed), reverse(speed) etc.  Speeds are floats from 1 for forwards,
-# 0 for stop and -1 for reverse, this is akin to GPIOZero. 
-#
-
-
-# robot class to drive motors using the 4Tronix picon zero motor driver
+# to control either a single motor or a pair of motors in the form of a robot
 
 import smbus
 import time
@@ -159,13 +153,13 @@ class Motor(Motor_Controller):
 		self.send_command(self.motor, self.scale_speed(self.speed))
 
 	def reverse(self, speed):
-                ''' Drive motor backwards
-                Speed range is 0 for stop
-                through to 1 for full speed reverse.
-                Speed is a float, so intermediate speeds can be fractions
-                of 1, for example, 50% speed would be 0.5
+		''' Drive motor backwards
+		Speed range is 0 for stop
+		through to 1 for full speed reverse.
+		Speed is a float, so intermediate speeds can be fractions
+		of 1, for example, 50% speed would be 0.5
 		'''
-		speed *= -1		
+		speed *= -1
 		if speed < -1:
 			self.speed = -1
 		elif speed  > 0:
